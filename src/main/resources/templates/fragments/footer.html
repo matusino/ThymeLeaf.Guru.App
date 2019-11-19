@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Spring Framework Guru - Course Name</title>
+    <meta charset="UTF-8"/>
+    <title th:text="#{index.page.title}">Page Title</title>
 
     <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
 
     <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"></script>
 
-    <style>
+    <link th:href="@{/css/custom.css}" rel="stylesheet" media="screen">
+
+    <style th:remove="all">
         .jumbotron {
-            background: url('https://d2vvqscadf4c1f.cloudfront.net/rGIBmJUAT46UuLPwXo3K_Fedora_Core_Ultimate2.jpg') no-repeat center center;
+            background: url('../static/images/SpringCoreJumbotron.jpg') no-repeat center center;
             height: 350px;
             color: white;
             text-shadow: #444 0 1px 1px;
@@ -107,65 +109,14 @@
             font-weight: 200;
             line-height: 30px;
         }
-
-
-
-
-
     </style>
-
 </head>
 <body>
-<div class="jumbotron">
-    <div class="container">
-        <div class="col-md-12">
-            <h1>Spring Framework Guru</h1>
-            <h2>Bootstrap Testing</h2>
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h2>SPRING framework Guru - Course Name</h2>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <img src="https://data.sashe.sk/photos/2017/07/13/54443/b/b-R8342551_54443_20170713_68457.jpg" alt=""
-                 height="290" width="506" class="center-block">
-        </div>
-        <div class="col-md-6">
-            <div>
-                <h2>Course Title</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis, elit eu varius molestie,
-                    massa
-                    neque finibus sem, eget posuere odio quam ultrices purus. Maecenas quis neque ac metus fringilla
-                    gravida
-                    sit amet sollicitudin sapien. Nulla at neque dui. Suspendisse et orci a mauris ultricies dictum eu
-                    sit
-                    amet lectus. Integer dapibus vestibulum leo, sit amet blandit turpis. Pellentesque convallis luctus
-                    consequat. Duis rutrum mauris rutrum pretium varius. Maecenas at ante nec lacus gravida tempus.
-                    Nulla
-                    lacinia sollicitudin aliquet. Maecenas aliquam urna sit amet eleifend blandit. Quisque dignissim
-                    ultrices turpis eget ultrices. Morbi placerat blandit erat a bibendum. Suspendisse nec nibh in felis
-                    placerat imperdiet iaculis id leo. Fusce pellentesque dictum nisl, at euismod lacus tincidunt a.
-                    Praesent rutrum tempor erat eget fermentum.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-offset-6 col-md-4">
-            <button class="btn btn-success">BUY NOW !</button>
-        </div>
-    </div>
-</div>
 <footer>
-    <div class="container" th:replace="fragments/footer :: footer">
-        <p>Copyright © 2007 Tutorialspoint.com</p>
+    <div class="container" th:fragment="footer">
+        <p>Copyright © 2007 Tutorialspoint.com = TESTUJEME</p>
     </div>
 </footer>
-
 </body>
 </html>
+
